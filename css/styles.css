@@ -187,9 +187,7 @@ ul { list-style: none; }
 .nav-logo img {
   height: 46px;
   width: 46px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid var(--pink);
+  object-fit: contain;
   box-shadow: 0 0 12px var(--pink-glow);
 }
 .nav-logo .brand-name {
@@ -301,9 +299,7 @@ ul { list-style: none; }
 .hero-logo {
   width: clamp(140px, 28vw, 260px);
   height: clamp(140px, 28vw, 260px);
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--pink);
+  object-fit: contain;
   box-shadow: 0 0 40px var(--pink-glow), 0 0 80px rgba(255, 45, 120, 0.25);
   margin: 0 auto 1.6rem;
 }
