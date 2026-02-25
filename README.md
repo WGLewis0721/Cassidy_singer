@@ -128,3 +128,46 @@ placeholder `<div>` tiles in `index.html` with `<img>` tags:
 ## Contact
 
 **CassidyAccasia@gmail.com** &bull; Alabama &bull; Available to Travel
+
+---
+
+## Gallery Images
+
+The gallery section references `assets/gallery-01.jpg` through `assets/gallery-06.jpg`.
+Drop your real performance photos into `/assets/` with those exact filenames to activate the gallery.
+
+To add more images, duplicate a `.gallery-tile` block inside the gallery grid and increment the filename.
+
+```html
+<!-- Example additional tile -->
+<div class="gallery-tile" data-lightbox="assets/gallery-07.jpg" data-alt="Cass — gallery photo 7"
+     tabindex="0" role="button" aria-label="View photo 7 fullscreen">
+  <img src="assets/gallery-07.jpg" alt="Cass — gallery photo 7" loading="lazy" />
+</div>
+```
+
+---
+
+## Media Embeds
+
+Replace placeholder IDs in `index.html` to activate the YouTube and Spotify embeds:
+
+| Placeholder | Replace with |
+|---|---|
+| `VIDEO_ID` in the YouTube iframe src | Your YouTube video ID (e.g. `dQw4w9WgXcQ`) |
+| `ARTIST_ID` in the Spotify iframe src | Your Spotify artist ID |
+| `YOUR_CHANNEL` in social / footer links | Your YouTube channel handle |
+| `YOUR_HANDLE` in social links | Your Instagram / TikTok handle |
+| `YOUR_ARTIST_ID` in Spotify footer link | Your Spotify artist ID |
+
+---
+
+## JavaScript
+
+`js/main.js` provides:
+
+- **Gallery lightbox** — click any gallery tile to view full-screen; close with ESC, the × button, or clicking outside the image.
+- **Booking form success message** — a confirmation banner appears above the form after submission.
+
+No external libraries are required.
+
