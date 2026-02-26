@@ -297,8 +297,9 @@ ul { list-style: none; }
 }
 
 .hero-logo {
-  width: clamp(140px, 28vw, 260px);
-  height: clamp(140px, 28vw, 260px);
+  width: clamp(340px, 78vw, 820px);
+  height: auto;
+  max-height: 55vh;
   object-fit: contain;
   filter: drop-shadow(0 0 40px var(--pink-glow)) drop-shadow(0 0 80px rgba(255, 45, 120, 0.25));
   margin: 0 auto 1.6rem;
@@ -1100,8 +1101,9 @@ blockquote cite {
   }
 
   .hero-logo {
-    width: 140px;
-    height: 140px;
+    width: clamp(280px, 88vw, 420px);
+    height: auto;
+    max-height: 45vh;
   }
 
   .mobile-book-cta {
