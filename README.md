@@ -1,12 +1,28 @@
-# Cass — Singer & Entertainer Website
+# Cass — Headlining Performer Website
 
 https://wglewis0721.github.io/Cassidy_singer/
 
-Production-ready static website for the **Cass** singer/entertainer brand.
-Built with pure HTML + CSS (no frameworks), designed for GitHub Pages hosting.
+Production-ready static website for the **Cass** headlining performer brand.
+Built with pure HTML + CSS + minimal JS (no frameworks), designed for GitHub Pages hosting.
 
-**Design:** Dark luxury aesthetic — matte black backgrounds, neon pink/magenta glow,
-smoky stage atmosphere, spotlight lighting, high contrast.
+**Design:** Dark luxury aesthetic — matte black backgrounds, restrained neon pink glow,
+cinematic stage atmosphere, bold typography, high contrast. Authority-driven, booking-first.
+
+---
+
+## Page Structure
+
+| Section | ID | Purpose |
+|---|---|---|
+| Navigation | `#navbar` | Fixed top nav with booking CTA |
+| Hero | `#hero` | Cinematic two-column headline with CTAs and authority strip |
+| Social Proof Strip | *(no ID)* | Star rating, testimonial quote, event category metrics |
+| Experience | `#experience` | Three premium feature blocks with velvet background |
+| Featured Live Experience | `#media` | Large video embed + category segmented controls |
+| Performance Gallery | `#gallery` | Responsive grid with lightbox |
+| Booking | `#booking` | Two-column form + booking snapshot card |
+| Final CTA | `#final-cta` | Dark authority CTA |
+| Footer | `#footer` | Quick nav, socials, brand statement |
 
 ---
 
@@ -44,26 +60,24 @@ All images and overlays referenced in the site live in the `/assets/` folder.
 
 | Filename | Used in |
 |---|---|
-| `main-logo.jpg` | Navbar logo + Hero logo |
 | `hero-background-smoke.jpg` | Hero section full-screen background |
 | `smoke-overlay.png` | Hero overlay (`mix-blend-mode: screen`) |
 | `glitter-overlay.png` | Hero overlay (`mix-blend-mode: overlay`) |
-| `velvet-dark-section-background.jpg` | About section background |
-| `microphone-stage.jpg` | About section image card |
-| `stage-spotlight-texture.jpg` | Media section subtle background |
+| `velvet-dark-section-background.jpg` | Experience section background |
+| `stage-spotlight-texture.jpg` | Media section background |
 | `social-banner-background.jpg` | Gallery section background |
-| `press-kit-background.jpg` | Press Kit section background |
 | `booking-section-background.jpg` | Booking section background |
-| `neon-divider-line.png` | Decorative divider between sections |
+| `press-kit-background.jpg` | Final CTA section background |
+| `neon-divider-line.png` | Decorative dividers between sections |
+| `gallery-01.jpg` — `gallery-06.jpg` | Performance gallery grid |
 
-Place all files directly inside `/assets/` — no sub-folders needed.
+### Hero Logo / Right-Side Visual
 
-### EPK / Download files
-
-When ready, place the following files in `/assets/` to activate the Press Kit downloads:
-
-- `assets/epk.pdf` — Full Electronic Press Kit
-- `assets/press-photos.zip` — High-resolution press photos
+The hero right column currently shows the main brand logo PNG.
+To use a live performance video instead, open `index.html`, locate the
+`<!-- Right: Logo / Performance visual -->` comment in the `#hero` section, and
+replace the `<img>` block with the commented-out `<div class="embed-responsive">` iframe,
+substituting `YOUR_VIDEO_ID` with your real YouTube video ID.
 
 ---
 
@@ -76,7 +90,7 @@ The booking form uses [Formspree](https://formspree.io) to handle submissions wi
 1. Create a free account at [formspree.io](https://formspree.io).
 2. Click **New Form** and give it a name (e.g. "Cass Booking").
 3. Copy the **Form ID** from the embed snippet (looks like `xpwzabcd`).
-4. Open `index.html` and find this line (around the `<form>` tag):
+4. Open `index.html` and find this line (inside the `#booking` section):
 
    ```html
    action="https://formspree.io/f/YOUR_FORM_ID"
@@ -101,28 +115,41 @@ and replace with the real social profile URLs.
 
 ## Gallery Photos
 
-To add real photos to the Gallery section, drop images into `/assets/` and update the
-placeholder `<div>` tiles in `index.html` with `<img>` tags:
+Drop performance photos into `/assets/` named `gallery-01.jpg` through `gallery-06.jpg`
+to populate the gallery grid. Images are displayed in a 3-column responsive grid with
+hover zoom, glow effect, and a fullscreen lightbox on click.
+
+To add more images, duplicate a `.gallery-tile` block inside the gallery grid and
+increment the filename:
 
 ```html
-<!-- Before -->
-<div class="gallery-tile">
-  <div class="gallery-tile-placeholder" aria-label="Gallery photo 1"> ... </div>
-</div>
-
-<!-- After -->
-<div class="gallery-tile">
-  <img src="assets/gallery-1.jpg" alt="Cass performing live, 2024" />
+<div class="gallery-tile" data-lightbox="assets/gallery-07.jpg" data-alt="Cass — performance photo 7"
+     tabindex="0" role="button" aria-label="View performance photo 7 fullscreen">
+  <img src="assets/gallery-07.jpg" alt="Cass performing live" loading="lazy" />
 </div>
 ```
+
+---
+
+## Media Embed
+
+Replace the `VIDEO_ID` placeholder in the `#media` section to activate the YouTube embed:
+
+| Placeholder | Replace with |
+|---|---|
+| `VIDEO_ID` in the YouTube iframe src | Your YouTube video ID (e.g. `dQw4w9WgXcQ`) |
+| `YOUR_CHANNEL` in footer links | Your YouTube channel handle |
+| `YOUR_HANDLE` in social links | Your Instagram / TikTok handle |
+| `YOUR_ARTIST_ID` in Spotify footer link | Your Spotify artist ID |
 
 ---
 
 ## Tech Stack
 
 - **HTML5** — semantic, accessible markup
-- **CSS3** — custom properties, grid, flexbox, responsive breakpoints
-- No JavaScript frameworks, no build tools, no dependencies
+- **CSS3** — custom properties, grid, flexbox, responsive breakpoints, fade-in animations
+- **Minimal JS** — gallery lightbox, media tab toggle, booking form feedback
+- No external frameworks, no build tools, no dependencies
 - Hosting: **GitHub Pages** (static)
 
 ---
@@ -130,46 +157,4 @@ placeholder `<div>` tiles in `index.html` with `<img>` tags:
 ## Contact
 
 **CassidyAccasia@gmail.com** &bull; Alabama &bull; Available to Travel
-
----
-
-## Gallery Images
-
-The gallery section references `assets/gallery-01.jpg` through `assets/gallery-06.jpg`.
-Drop your real performance photos into `/assets/` with those exact filenames to activate the gallery.
-
-To add more images, duplicate a `.gallery-tile` block inside the gallery grid and increment the filename.
-
-```html
-<!-- Example additional tile -->
-<div class="gallery-tile" data-lightbox="assets/gallery-07.jpg" data-alt="Cass — gallery photo 7"
-     tabindex="0" role="button" aria-label="View photo 7 fullscreen">
-  <img src="assets/gallery-07.jpg" alt="Cass — gallery photo 7" loading="lazy" />
-</div>
-```
-
----
-
-## Media Embeds
-
-Replace placeholder IDs in `index.html` to activate the YouTube and Spotify embeds:
-
-| Placeholder | Replace with |
-|---|---|
-| `VIDEO_ID` in the YouTube iframe src | Your YouTube video ID (e.g. `dQw4w9WgXcQ`) |
-| `ARTIST_ID` in the Spotify iframe src | Your Spotify artist ID |
-| `YOUR_CHANNEL` in social / footer links | Your YouTube channel handle |
-| `YOUR_HANDLE` in social links | Your Instagram / TikTok handle |
-| `YOUR_ARTIST_ID` in Spotify footer link | Your Spotify artist ID |
-
----
-
-## JavaScript
-
-`js/main.js` provides:
-
-- **Gallery lightbox** — click any gallery tile to view full-screen; close with ESC, the × button, or clicking outside the image.
-- **Booking form success message** — a confirmation banner appears above the form after submission.
-
-No external libraries are required.
 
