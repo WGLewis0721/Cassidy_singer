@@ -297,10 +297,13 @@ ul { list-style: none; }
 }
 
 .hero-logo {
-  width: clamp(420px, 88vw, 980px);
+  display: block;
+  width: clamp(480px, 96vw, 1100px);
   height: auto;
-  max-height: 60vh;
-  object-fit: contain;
+  max-height: 72vh;
+  background: none;
+  border: none;
+  outline: none;
   filter: drop-shadow(0 0 40px var(--pink-glow)) drop-shadow(0 0 80px rgba(255, 45, 120, 0.25));
   margin: 0 auto 1.6rem;
 }
