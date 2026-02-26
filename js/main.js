@@ -1,6 +1,6 @@
 /* ============================================================
    CASS — js/main.js
-   Gallery lightbox + booking form success message + media tabs
+   Gallery lightbox + booking form success message
    ============================================================ */
 
 (function () {
@@ -57,18 +57,6 @@
     if (e.key === 'Escape' && lightbox && !lightbox.hidden) {
       closeLightbox();
     }
-  });
-
-  /* ── Media category tab toggle ────────────────────────────── */
-  document.querySelectorAll('.media-tab').forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      document.querySelectorAll('.media-tab').forEach(function (t) {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-    });
   });
 
   /* ── Booking form: show success message on submit ─────────── */
