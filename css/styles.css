@@ -185,8 +185,8 @@ ul { list-style: none; }
   gap: 10px;
 }
 .nav-logo img {
-  height: 46px;
-  width: 46px;
+  height: 58px;
+  width: auto;
   object-fit: contain;
   filter: drop-shadow(0 0 12px var(--pink-glow));
 }
@@ -297,9 +297,9 @@ ul { list-style: none; }
 }
 
 .hero-logo {
-  width: clamp(340px, 78vw, 820px);
+  width: clamp(420px, 88vw, 980px);
   height: auto;
-  max-height: 55vh;
+  max-height: 60vh;
   object-fit: contain;
   filter: drop-shadow(0 0 40px var(--pink-glow)) drop-shadow(0 0 80px rgba(255, 45, 120, 0.25));
   margin: 0 auto 1.6rem;
@@ -1101,9 +1101,9 @@ blockquote cite {
   }
 
   .hero-logo {
-    width: clamp(280px, 88vw, 420px);
+    width: clamp(300px, 94vw, 500px);
     height: auto;
-    max-height: 45vh;
+    max-height: 48vh;
   }
 
   .mobile-book-cta {
