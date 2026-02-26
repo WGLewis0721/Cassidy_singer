@@ -1,5 +1,7 @@
 # Cass — Singer & Entertainer Website
 
+https://wglewis0721.github.io/Cassidy_singer/
+
 Production-ready static website for the **Cass** singer/entertainer brand.
 Built with pure HTML + CSS (no frameworks), designed for GitHub Pages hosting.
 
