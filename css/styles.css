@@ -11,6 +11,7 @@
   --pink:         #e8296e;
   --magenta:      #c0008f;
   --pink-glow:    rgba(232, 41, 110, 0.35);
+  --star-gold:    #c8a84b;
   --text:         #f0f0f0;
   --muted:        #888;
   --border:       rgba(232, 41, 110, 0.2);
@@ -324,7 +325,7 @@ ul { list-style: none; }
 }
 
 .hero-headline {
-  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-size: clamp(2.2rem, 5.5vw, 4.4rem);
   font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -422,7 +423,7 @@ ul { list-style: none; }
 
 .proof-stars {
   font-size: 1.4rem;
-  color: #c8a84b;
+  color: var(--star-gold);
   letter-spacing: 0.18em;
 }
 
@@ -1084,9 +1085,6 @@ ul { list-style: none; }
     letter-spacing: 0.04em;
   }
 
-  .hero-headline {
-    font-size: clamp(2rem, 9vw, 2.8rem);
-  }
   .hero-logo-right {
     max-width: 280px;
   }
